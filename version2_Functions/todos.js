@@ -25,3 +25,18 @@ function addTodo(todo) {
 }
 
 addTodo("item 4");
+
+// change todos
+function changeTodo(index, newValue) {
+    todos[index] = newValue;
+    displayTodos();
+}
+
+changeTodo(0, "new item 1");
+
+// delete todo
+function deleteTodo(index) {
+    console.log('"' + todos[index] + '"' + ' was deleted.');
+    todos.splice(index, 1);
+    displayTodos();
+}
