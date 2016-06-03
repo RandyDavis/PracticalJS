@@ -34,7 +34,7 @@ function changeTodo(index, newValue) {
 
 changeTodo(0, "new item 1");
 
-// delete todo
+// delete todos
 function deleteTodo(index) {
     console.log('"' + todos[index] + '"' + ' was deleted.');
     todos.splice(index, 1);
