@@ -6,3 +6,11 @@ var myComputer = {
     screenSize: '15 inches',
     purchaseYear: 2011
 };
+
+// Objects and Functions
+var randy = {
+    name: "Randy",
+    sayName: function () {
+        console.log(this.name);
+    }
+}
