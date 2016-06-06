@@ -1,6 +1,11 @@
 /**
  * Created by randy on 6/5/16.
  */
+// Requirements
+    // todoList.addTodo should add objects
+    // todoList.changeTodo should change the todoText property
+    // todoList.toggleCompleted should change the completed property
+
 var todoList = {
     todos: [],
     displayTodos: function (todos) {
@@ -10,8 +15,8 @@ var todoList = {
         this.todos.push({todoText: todoText, completed: false});
         this.displayTodos();
     },
-    changeTodo: function (index, newValue) {
-        this.todos[index] = newValue;
+    changeTodo: function (index, todoText) {
+        this.todos[index].todoText = todoText;
         this.displayTodos();
     },
     deleteTodo: function (index) {
