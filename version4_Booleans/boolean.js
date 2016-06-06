@@ -22,5 +22,10 @@ var todoList = {
     deleteTodo: function (index) {
         this.todos.splice(index, 1);
         this.displayTodos();
+    },
+    toggleCompleted: function (index) {
+        var todo = this.todos[index];
+        todo.completed = !todo.completed;
+        this.displayTodos();
     }
 }
