@@ -25,5 +25,9 @@ var todoList = {
     addTodo: function (todo) {
         this.todos.push(todo);
         this.displayTodos();
+    },
+    changeTodo: function (index, newValue) {
+        this.todos[index] = newValue;
+        this.displayTodos();
     }
 };
