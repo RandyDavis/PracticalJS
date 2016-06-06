@@ -29,5 +29,9 @@ var todoList = {
     changeTodo: function (index, newValue) {
         this.todos[index] = newValue;
         this.displayTodos();
+    },
+    deleteTodo: function (index) {
+        this.todos.splice(index, 1);
+        this.displayTodos();
     }
 };
