@@ -40,7 +40,13 @@ var todoList = {
     },
     toggleAll: function () {
         var totalTodos = this.todos.length;
+        var todos = this.todos;
         var completedTodos = 0;
+        var toggle = function (value) {
+            for (var i = 0; i < totalTodos; i++) {
+                todos[i].completed = value;
+            }
+        }
 
         // Get number of completed todos.
         for (var i = 0; i < totalTodos; i++) {
@@ -52,15 +58,17 @@ var todoList = {
         // Case 1: If everything's true, make everything false
         if (completedTodos === totalTodos) {
             // Make everything false
-            for (var i = 0; i < totalTodos; i++) {
-                this.todos[i].completed = false;
-            }
+            // for (var i = 0; i < totalTodos; i++) {
+            //     this.todos[i].completed = false;
+            // }
+            toggle(false);
         }
         // Case 2: Otherwise, make everything true
         else {
-            for (var i = 0; i < totalTodos; i++) {
-                this.todos[i].completed = true;
-            }
+            // for (var i = 0; i < totalTodos; i++) {
+            //     this.todos[i].completed = true;
+            // }
+            toggle(true);
         }
         this.displayTodos();
     }
