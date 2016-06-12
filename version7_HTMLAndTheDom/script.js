@@ -6,7 +6,7 @@
     // Clicking 'Display todos' should run todoList.displayTodos
     // clicking 'Toggle All' should run todoList.toggleAll();
 var todoList = {
-    todos: {},
+    todos: [],
     displayTodos: function () {
         if (this.todos.length === 0) {
             console.log("Your todo list is empty!");
@@ -26,7 +26,7 @@ var todoList = {
         this.displayTodos();
     },
     changeTodo: function (index, todoText) {
-        this.todos[index] = todoText;
+        this.todos[index].todoText = todoText;
         this.displayTodos();
     },
     deleteTodo: function (index) {
@@ -62,10 +62,8 @@ var todoList = {
         }
         // Case 2: Otherwise, make everything true
         else {
-            // Make everything true
             toggle(true);
         }
         this.displayTodos();
     }
-
 }
