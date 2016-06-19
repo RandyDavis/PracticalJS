@@ -8,6 +8,7 @@
 var todoList = {
     todos: [],
     displayTodos: function () {
+        // debugger;
         if (this.todos.length === 0) {
             console.log("Your todo list is empty!");
         } else {
@@ -22,23 +23,28 @@ var todoList = {
         }
     },
     addTodo: function (todoText) {
+        // debugger;
         this.todos.push({todoText: todoText, completed: false});
         this.displayTodos();
     },
     changeTodo: function (index, todoText) {
+        // debugger;
         this.todos[index].todoText = todoText;
         this.displayTodos();
     },
     deleteTodo: function (index) {
+        // debugger;
         this.todos.splice(index, 1);
         this.displayTodos();
     },
     toggleCompleted: function (index) {
+        // debugger;
         var todo = this.todos[index];
         todo.completed = !todo.completed;
         this.displayTodos();
     },
     toggleAll: function () {
+        // debugger;
         var totalTodos = this.todos.length;
         var todos = this.todos;
         var completedTodos = 0;
