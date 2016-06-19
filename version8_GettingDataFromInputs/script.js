@@ -81,7 +81,7 @@ var handlers = {
     },
     changeTodo: function () {
         var changeTodoPositionInput = document.getElementById("changeTodoPositionInput");
-        var chagneTodoTextInput = document.getElementById("changeTodoTextInput");
+        var changeTodoTextInput = document.getElementById("changeTodoTextInput");
 
         todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
         changeTodoPositionInput.value = '';
