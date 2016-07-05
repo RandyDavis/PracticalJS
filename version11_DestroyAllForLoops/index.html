@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical Todos</title>
+    <link id="favicon" rel="icon" href="https://hyperdev.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Todo List</h1>
+
+    <div>
+        <button onclick="handlers.toggleAll()">Toggle All</button>
+    </div><br>
+
+
+    <div>
+        <input id="addTodoTextInput"  type="text">
+        <button onclick="handlers.addTodo()">Add</button>
+    </div>
+    <br>
+
+    <div>
+        <input id="changeTodoPositionInput" type="number">
+        <input id="changeTodoTextInput" type="text">
+        <button onclick="handlers.changeTodo()">Change Todo</button>
+    </div>
+    <br>
+
+    <div>
+        <input id="toggleCompletedPositionInput" type="number">
+        <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+    </div>
+
+    <div>
+        <ul></ul>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
